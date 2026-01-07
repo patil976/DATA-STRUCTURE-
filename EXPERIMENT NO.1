@@ -1,0 +1,47 @@
+# DATA-STRUCTURE- EXPERIMENT NO.1 
+DATA STRUCTURE IS A WAY OF ORGANIZING AND STORING DATA IN A COMPUTER SO THAT IT CAN BE ACCESSED AND USED EFFICINTLY.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[10] = {10, 20, 30, 40, 50};
+    int size = 5;
+
+    cout << "Array: ";
+    for (int i = 0; i < size; i++)
+        cout << arr[i] << " ";
+
+    int key;
+    cout << "\nEnter value to search: ";
+    cin >> key;
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == key) {
+            cout << "Found at index " << i;
+            break;
+        }
+    }
+
+    int index, value;
+    cout << "\nEnter index to update: ";
+    cin >> index;
+    cout << "Enter new value: ";
+    cin >> value;
+    arr[index] = value;
+
+    cout << "\nEnter value to insert: ";
+    cin >> value;
+    arr[size] = value;
+    size++;
+
+    for (int i = 2; i < size - 1; i++)
+        arr[i] = arr[i + 1];
+    size--;
+
+    cout << "\nFinal Array: ";
+    for (int i = 0; i < size; i++)
+        cout << arr[i] << " ";
+
+    return 0;
+}
+
